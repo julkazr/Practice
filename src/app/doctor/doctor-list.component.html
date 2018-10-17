@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="first-grid-row">
+        <h1>Lista stomatologa</h1>
+        <div class="filter">
+            <h4>Nađi stomatologa po imenu:</h4>
+            <input  [(ngModel)]='filterList' id="doctor-filter" type="text" onfocus="isTouched()" onfocusout="leaveInputField()" placeholder="Unesi text...">
+        </div>
+    </div>
+    <table *ngIf="filteredList && filteredList.length" class="list-table">
+        <tr class="table-head">
+            <th>Ime i prezime</th>
+            <th>Broj LK</th>
+            <th>Mesto rođenja</th>
+            <th>Datum rođenja</th>
+            <th>Naziv radnog mesta</th>
+            <th>Promene podataka</th>
+        </tr>
+        <tr *ngFor="let doctor of filteredList" class="table-body">
+            <td>{{doctor.name + ' ' + doctor.lastName}}</td>
+            <td>{{doctor.numberLk}}</td>
+            <td>{{doctor.placeOfBirth}}</td>
+            <td>{{doctor.dateOfBirth}}</td>
+            <td>{{doctor.position}}</td>
+            <td>
+                <button class="button-style update">
+                    <a [routerLink]="['/doctor-list', doctor.uid]">Ažuriraj stomatologa</a>
+                </button>
+            </td>
+        </tr>
+    </table>
+    <div class="buttons">
+        
+        <button class="button-style add-new">
+            <a [routerLink]="['/add-doctor']">Dodaj novog stomatologa</a>
+        </button>
+        <div class="clear"></div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+nav.navbar {
+    background: rgba(53, 137, 139, 0.4);
+    width: 100vw;
+    height: auto; 
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+a {
+    color: #000000;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+/* za administrativni deo */
+ul.admin {
+    float: right;
+    margin-top: -60px;
+    margin-right: 60px;
+}
+/* kraj administrativnog dela navigacije */
+
+
+/* Ne treba, za sada */
+.activated {
+    background-color: #A7FFEB;
+}
+
+/* .wrapper {
+    min-height: 100vh;
+  } */

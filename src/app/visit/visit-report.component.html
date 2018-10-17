@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="first-grid-row">
+        <h1>Izveštaj</h1>
+    </div>
+    <ul>
+        <li><strong>Datum posete:</strong> {{visit.date | date:'medium'}}</li>
+        <li><strong>Pacijent:</strong> {{visit.patient}}</li>
+        <hr>
+        <li><strong>Dijagnoza:</strong> {{visit.diagnose}}</li>
+        <hr>
+        <li><strong>Zubar:</strong> {{visit.doctor}}</li>
+    </ul>
+    <div class="form-button">
+        <button class="button-style" click="onBack()">Nazad na preglede</button>
+    </div>
+    <div class="form-button">
+        <button class="button-style button-right">Štampaj</button>
+    </div>
+</div>

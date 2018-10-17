@@ -1,0 +1,11 @@
+.row {
+    max-width: 100vw;
+    height: 100vh;
+    display: block;
+    background-image: url("/../assets/img/background.jpg");
+    background-size: cover;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}

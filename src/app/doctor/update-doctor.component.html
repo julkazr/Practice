@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="first-grid-row">
+        <h1>Ažuriranje podataka zubara</h1>
+    </div>
+    <form action="" id="update-form">
+        <label class="update-label" for="name">Ime</label>
+            <input class="update-doctor" type="text" name="name" onfocus="isTouched" value="{{doctor.name}}">
+        <br>
+        <div class="clear"></div>
+        <label class="update-label" for="lastName">Prezime
+            <input class="update-doctor" type="text" name="lastName" onfocus="isTouched" value="{{doctor.lastName}}">
+        </label><br>
+        <div class="clear"></div>
+        <label class="update-label" for="numberLk">Broj lične karte
+            <input class="update-doctor" type="number" name="numberLk" onfocus="isTouched" value="{{doctor.numberLk}}">
+        </label><br>
+        <div class="clear"></div>
+        <label class="update-label" for="placeOfBirth">Mesto rođenja
+            <input class="update-doctor" type="text" name="placeOfBirth" onfocus="isTouched" value="{{doctor.placeOfBirth}}">
+        </label><br>
+        <div class="clear"></div>
+        <label class="update-label" for="dateOfBirth">Datum rođenja
+            <input class="update-doctor" type="text" name="dateOfBirth" onfocus="isTouched" value="{{doctor.dateOfBirth | date}}">
+        </label><br>
+        <div class="clear"></div>
+        <label class="update-label" for="position">Radno mesto (specijalnost)
+            <input class="update-doctor" type="text" name="position" onfocus="isTouched" value="{{doctor.position}}">
+        </label><br>
+        <div class="clear"></div>
+        <div class="buttons buttons-form">
+                <div class="form-button">
+                        <button class="button-style" (click)='onBack()'>Nazad na listu</button>
+                    </div>
+                <div class="form-button">
+                    <button class="button-style form-style">Ažuriraj</button>
+                </div>
+            </div>
+    </form>
+</div>

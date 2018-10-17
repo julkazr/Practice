@@ -1,0 +1,12 @@
+.circle {
+    border-radius: 50%;
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    width: 70vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 200px auto 200px;
+}

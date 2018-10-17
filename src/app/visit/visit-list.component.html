@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="first-grid-row">
+        <h1>Pregledi</h1>
+        <div class="filter">
+            <h4>Nađi pregled pacijenta:</h4>
+            <input [(ngModel)]='filterList' id="person-filter" type="text" onfocus="isTouched()" onfocusout="leaveInputField()">
+        </div>
+    </div>
+    <table *ngIf="filteredList && filteredList.length" class="list-table">
+        <tr class="table-head">
+            <th>Datum posete</th>
+            <th>Lekar</th>
+            <th>Pacijent</th>
+            <th>Dijagnoza</th>
+            <th>izveštaj</th>
+        </tr>
+        <tr *ngFor="let visit of filteredList" class="table-body">
+            <td>{{visit.date | date}}</td>
+            <td>{{visit.doctor}}</td>
+            <td>{{visit.patient}}</td>
+            <td>{{visit.diagnose}}</td>
+            <td>
+                <button class="button-style update" [routerLink]="['/visit-list', visit.visitId]">
+                    <a>Idi na  izveštaj</a>
+                </button>
+            </td>
+        </tr>
+    </table>
+    <div class="buttons">
+        
+        <button class="button-style add-new" [routerLink]="['/add-visit']">
+            <a>Dodaj novi pregled</a>
+        </button>
+        <div class="clear"></div>
+    </div>
+</div>

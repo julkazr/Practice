@@ -1,0 +1,132 @@
+/*font-family: 'Montserrat', sans-serif; color: #07a08a;*/
+.container {
+    font-family: 'Montserrat', sans-serif;
+    width: 70vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 200px auto 100px;
+}
+
+.first-grid-row {
+    grid-row: 1/2;
+}
+
+h1 {
+    color: #07a08a;
+}
+
+#person-filter {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 2px solid #07a08a;
+    border-radius: 4px;
+}
+
+:focus {
+    outline: none;
+}
+
+.active {
+    box-shadow: 5px 5px 5px #07a08a;
+    border: none;
+}
+
+.list-table {
+    grid-row: 2/3;
+    text-align: left;
+    border-spacing: none;
+}
+
+.table-head {
+    box-sizing: border-box;
+    background-color: #07a08a;
+}
+
+th {
+    padding: 10px; 
+}
+
+.buttons {
+    grid-row: 3/4;
+    
+}
+
+.button-style {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #07a08a;
+    border-radius: 4px;
+    background-color: #A7FFEB;
+   
+}
+
+.button-style:hover {
+    box-shadow: 5px 5px 5px #07a08a;
+}
+
+.add-new {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/* For add-visit & visit report - difference */
+
+#add-form {
+    grid-row: 2/3;
+    width: 40vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+.add-label {
+    min-width: 20vw;
+    
+}
+
+.add-person {
+    min-width: 20vw;
+    padding: 10px;
+    margin: -10px 10px 20px 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 2px solid #07a08a;
+    border-radius: 4px;
+    float: right;
+}
+
+.txt-area {
+    min-width: 50vw;
+    padding: 10px;
+    margin-top: 20px;
+    width: 300px;
+    font-size: 16px;
+    border: 2px solid #07a08a;
+    border-radius: 4px;
+}
+
+li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+hr {
+    border-top: 3px solid #07a08a;
+}
+
+.form-button {
+    min-width: 40vw;
+    margin-top: 10px;
+    position: relative;
+    float: right;
+}
+
+.button-right {
+    position: absolute;
+    bottom: -0px;
+    left: 90%;
+}

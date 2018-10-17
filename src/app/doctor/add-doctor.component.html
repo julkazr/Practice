@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="first-grid-row">
+        <h1>Dodavanje novog zubara</h1>
+    </div>
+    <form action="" id="update-form" (ngSubmit)="addNewDoctor()" #form="ngForm">
+        <label class="update-label" for="name">Ime</label>
+            <input class="update-doctor" type="text" ngModel name="name" required placeholder="Ime zubara">
+        <br>
+        <div class="clear"></div>
+        <label class="update-label" for="lastName">Prezime
+            <input class="update-doctor" type="text" ngModel name="lastName" required placeholder="Prezime zubara">
+        </label><br>
+        <div class="clear"></div>
+        <label class="update-label" for="numberLk">Broj lične karte
+            <input class="update-doctor" type="number" ngModel name="numberLk" required placeholder="Broj lične karte">
+        </label><br>
+        <div class="clear"></div>
+        <label class="update-label" for="placeOfBirth">Mesto rođenja
+            <input class="update-doctor" type="text" ngModel name="placeOfBirth" required placeholder="Mesto rođenja">
+        </label><br>
+        <div class="clear"></div>
+        <label class="update-label" for="dateOfBirth">Datum rođenja
+            <input class="update-doctor" type="text" ngModel name="dateOfBirth" required placeholder="Datum rođenja">
+        </label><br>
+        <div class="clear"></div>
+        <label class="update-label" for="position">Radno mesto (specijalnost)
+            <input class="update-doctor" type="text" ngModel name="position" required placeholder="Radno mesto(specijalnost)">
+        </label><br>
+        <div class="clear"></div>
+        <div class="buttons buttons-form">
+            <div class="form-button">
+                    <button class="button-style" (click)='onBack()'>Nazad na listu</button>
+                </div>
+            <div class="form-button">
+                <button class="button-style form-style" type="submit" [disabled]="form.invalid">Dodaj</button>
+            </div>
+        </div>
+
+    </form>
+</div>

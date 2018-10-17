@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="first-grid-row">
+    <h1>Prijavi se</h1>
+    <form id="login-form" #loginForm="ngForm">
+      <div class="clear"></div>
+      <input type="email" id="email" name="email" class="login" placeholder="Ukucajte email" required 
+      [(ngModel)]="email" autofocus email>
+      <!-- <div [hidden]="!email.invalid || !email.touched"  class="invalid-feedback">
+        <span id="nameHelpBlock">Ukucajte validan email.</span>
+      </div> -->
+      <div class="clear"></div>
+      <input type="password" id="password" name="password" [(ngModel)]="password" class="login" placeholder="Unesite lozinku" required>
+      <!-- <div [hidden]="!password.invalid || !password.touched" class="invalid-feedback">
+        <span id="passwordHelpBlock">Lozinka je obavezna i mora imati najmanje 6 karaktera.</span>
+      </div> -->
+      <div class="clear"></div>
+      <label>
+        <input type="checkbox" value="remember-me">Zapamti me
+      </label>
+      <div class="buttons buttons-form">
+        <div class="form-buttton">
+          <button class="button-style" type="submit" (click)="onSubmit()" [disabled]="loginForm.invalid">Prijavi se</button>
+          <button class="button-style" [routerLink]="['/sign-up']" type="submit">Novi korisnik? Registruj se</button>
+          <button class="button-style" [routerLink]="['/user-details']" type="submit" (click)="googleLogin()">Prijavi se preko gugla</button>
+        </div>
+      </div>
+    </form>
+    <!-- /form -->
+    <p class="text-center mt-2">
+      <!-- <a [routerLink]="['/forgot-password']" [translate]="'signIn.forgotPassword'">
+      </a> -->
+    </p>
+  </div>
+  <!-- /card-container -->
+</div>
+<!-- /container -->
